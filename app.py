@@ -8,6 +8,10 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+@app.route("/allrecipes")
+def all_recipes():
+    return render_template("all_recipes.html")
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
